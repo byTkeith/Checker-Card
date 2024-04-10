@@ -27,11 +27,11 @@ public class Check {
              
         }
         for(String eLine: cards){
+            int insertCounter=0;
             String[] sepCards=eLine.split(" ");//splits each line into separate cards
             for(String eCard: sepCards){//loops through all three cards
                 String[] eCardChar=eCard.split(",");//splits each card to its respective characteristics
                 int i;
-                int insertCounter=0;
                 for(i=0;i<eCardChar.length;i++){
                     if(!matcher.contains(eCardChar[i])){
                         matcher.add(eCardChar[i]);//if the card characteristic does not exist in the array add it
@@ -40,6 +40,7 @@ public class Check {
                 }
 
             }
+            System.out.println("the number of words inserted are: "+insertCounter);
            
         }
     }
