@@ -27,6 +27,10 @@ public class Check {
         }
         for(String eLine: cards){
             String[] sepCards=eLine.split(" ");//splits each line into separate cards
+            for(String eCard: sepCards){//loops through all three cards
+
+            }
+           
         }
     }
 }
