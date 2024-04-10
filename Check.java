@@ -8,6 +8,7 @@ import java.util.*;
 public class Check {
     public static void main(String[] args) {
         ArrayList<String> cards=new ArrayList<>();//to add the card lines from the file
+        ArrayList<String> matcher=new ArrayList<>();//stores value and counters if ther are equal
         Scanner scanner =new Scanner(System.in);
         System.out.println("Enter the name of the cards file:");
         String filename= scanner.nextLine();
@@ -28,6 +29,14 @@ public class Check {
         for(String eLine: cards){
             String[] sepCards=eLine.split(" ");//splits each line into separate cards
             for(String eCard: sepCards){//loops through all three cards
+                String[] eCardChar=eCard.split(",");//splits each card to its respective characteristics
+                int i;
+                int insertCounter=0;
+                for(i=0;i<eCardChar.length;i++){
+                    if(!matcher.contains(eCardChar[i])){
+                        matcher.add(eCardChar[i]);//if the card characteristic does not exist in the array add it
+                    }
+                }
 
             }
            
