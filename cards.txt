@@ -1,0 +1,1 @@
+square,blue,spot circle,red,solid triangle,green,stripe

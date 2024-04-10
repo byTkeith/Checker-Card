@@ -35,6 +35,7 @@ public class Check {
                 for(i=0;i<eCardChar.length;i++){
                     if(!matcher.contains(eCardChar[i])){
                         matcher.add(eCardChar[i]);//if the card characteristic does not exist in the array add it
+                        insertCounter++;//when a value is added we increment to keep track of how many items are in the array.
                     }
                 }
 
