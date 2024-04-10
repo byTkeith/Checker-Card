@@ -27,7 +27,7 @@ public class Check {
              
         }
         int insertCounter=0;
-        int missedCounter=0;
+        int skippedCounter=0;
         for(String eLine: cards){
             //int insertCounter=0;
             String[] sepCards=eLine.split(" ");//splits each line into separate cards
@@ -40,12 +40,18 @@ public class Check {
                         matcher.add(eCardChar[i]);//if the card characteristic does not exist in the array add it
                         insertCounter++;//when a value is added we increment to keep track of how many items are in the array.
                     }
+                    else{ skippedCounter++;}
                 }//System.out.println("the number of words inserted are: "+insertCounter);
 
             }
+            if(insertCounter%2!=0){
+                
+            }
+            System.out.println("Processing: "+eLine);
             
-            System.out.println("the number of words inserted are: "+insertCounter);
+            System.out.println("the number of words inserted are: "+insertCounter+" skipped words are: "+ skippedCounter);
             insertCounter=0;
+            skippedCounter=0;
             matcher.clear();
            
         }
