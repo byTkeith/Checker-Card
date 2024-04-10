@@ -44,16 +44,20 @@ public class Check {
                 }//System.out.println("the number of words inserted are: "+insertCounter);
 
             }
-            if(insertCounter%2!=0){
-                
+            if(insertCounter%2!=0 || skippedCounter%2==0){
+                System.out.println("Processing: "+eLine+"\nValid");
+
             }
-            System.out.println("Processing: "+eLine);
+            else {
+                System.out.println("Processing: "+eLine+"\n"+"Invalid");
+            }
             
-            System.out.println("the number of words inserted are: "+insertCounter+" skipped words are: "+ skippedCounter);
+            //System.out.println("the number of words inserted are: "+insertCounter+" skipped words are: "+ skippedCounter);
             insertCounter=0;
             skippedCounter=0;
             matcher.clear();
            
         }
+        System.out.println("Done");
     }
 }
