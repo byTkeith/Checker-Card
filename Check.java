@@ -44,7 +44,7 @@ public class Check {
                 }//System.out.println("the number of words inserted are: "+insertCounter);
 
             }
-            if(insertCounter%2!=0 || skippedCounter%2==0){
+            if(insertCounter==9 || (insertCounter==3 && skippedCounter==6) ){
                 System.out.println("Processing: "+eLine+"\nValid");
 
             }
